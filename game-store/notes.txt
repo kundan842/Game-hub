@@ -1,0 +1,35 @@
+=> various built in 3rd party librery is being used for ui devlopemtnt
+=> bootstrtap, chackraui, material ui
+=> chakra ui has built in component just need to install and import from
+it for diffrent project vites, gastsby, app
+for all: https://chakra-ui.com/getting-started
+for vite: https://chakra-ui.com/getting-started/vite-guide
+=> npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+=> for component like buttons just serach on cjakra ui and import and use 
+built in component
+=> responsive design : https://chakra-ui.com/docs/styled-system/responsive-styles
+https://chakra-ui.com/docs/components/grid/usage
+=> in grid  can define tenplate areas using this "" repesnts the one row
+ templateAreas={'"nav nav" "aside main" '}
+ => to desgin for mobile device sits better to use single columm for each row 
+ as size is ariund 760 px for tablets
+ => for bigger devices can have two coloumns for each row
+ Responsive Styles
+Chakra UI supports responsive styles out of the box.
+ Instead of manually adding @media queries and adding nested styles
+  throughout your code, Chakra UI allows you to provide object and array values to add mobile-first responsive styles.
+  Remember, Chakra UI uses the min-width media query for responsive design. The breakpoints are: base = 0em, sm = 30em, md = 48em, lg = 62em, xl = 80em,, 2xl = 96em
+
+Here's how to interpret this syntax fontSize={{ base: '24px', md: '40px', lg: '56px' }}:
+
+24px: From 0em upwards
+40px: From 48em upwards
+56px: From 62em upwards
+=> <Show above="lg">
+          {" "}
+          <GridItem area={"aside"} bg="pink">
+            Aside
+          </GridItem>
+        </Show>
+=> this will show the aside area when device widet is lg or above lg
+=> https://chakra-ui.com/docs/components/show-hide/usage
