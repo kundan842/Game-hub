@@ -33,3 +33,9 @@ Here's how to interpret this syntax fontSize={{ base: '24px', md: '40px', lg: '5
         </Show>
 => this will show the aside area when device widet is lg or above lg
 => https://chakra-ui.com/docs/components/show-hide/usage
+================================================================================
+   building top navbar
+=> https://getbootstrap.com/docs/5.1/helpers/stacks/ 
+stacks to build horizontal or vertical layout
+https://chakra-ui.com/docs/components/stack/usage#feature-cards-with-stack-component
+=> A file with the .webp file extension is a file format developed by Google to reduce the size of images without having to sacrifice quality for storage space. WebP images are designed to make the web faster, with smaller, richer photos for developers to use.
