@@ -39,3 +39,30 @@ Here's how to interpret this syntax fontSize={{ base: '24px', md: '40px', lg: '5
 stacks to build horizontal or vertical layout
 https://chakra-ui.com/docs/components/stack/usage#feature-cards-with-stack-component
 => A file with the .webp file extension is a file format developed by Google to reduce the size of images without having to sacrifice quality for storage space. WebP images are designed to make the web faster, with smaller, richer photos for developers to use.
+==========================================================================================================================================
+ color mode change
+ => https://getbootstrap.com/docs/5.1/forms/checks-radios/#switches 
+ => https://chakra-ui.com/docs/components/switch/usage#switch-background-color
+ => https://chakra-ui.com/docs/styled-system/color-mode
+ useColorMode hhok that give current color mode and toggleColermode fucntion
+ to chnage color mode
+ => define theme.tsx and configuration like initial color mode and import theme in main and 
+==================================================================================================================
+ : dd1c596d6ab24bb6909f27f7966dd259
+dd1c596d6ab24bb6909f27f7966dd259
+https://rawg.io/
+=> api documentattion to get the games : https://api.rawg.io/docs/#operation/games_list
+=> components should resposnible for returning markup and handling user interaction
+=> it need not know the api endpoint and the res , error, then aborting request
+=> so better to create  a custom hook that will make request and abort request , know the endpoint
+=> these custom hooks are not only resposnible for sharing fucntionality
+but its also provdies the seperation of concerns and make code  more modular
+=> https://chakra-ui.com/docs/components/simple-grid/usage
+=> https://chakra-ui.com/docs/components/card/usage
+=> when the elmemnt overflows the caontainer like card then set oveflow=hideen 
+=> for  responsive degin settting 
+<SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 5 }} spacing={10}>
+smaller device will have 1 column lg like laptop will have 3 so on 
+=> https://chakra-ui.com/docs/styled-system/style-props#margin-and-padding
+=> to place composnennst horizonatlly hstch is used
+
