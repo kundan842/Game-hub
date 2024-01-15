@@ -74,4 +74,7 @@ we  can also see the images fetched forom server or cdn in image tab
 => https://chakra-ui.com/docs/components/skeleton/usage
 =>          <GameCardContainer> <GameCard key={game.id} game={game}></GameCard></GameCardContainer>
 here when the GameCard is wrapped inside the GameCardContainer, GameCard is props of type ReactNode
+=> a compoennt should not know about the http request or end point 
+it should return markup
+
 

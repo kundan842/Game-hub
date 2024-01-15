@@ -7,7 +7,7 @@ import LoadingSkelaton from "./LoadingSkelatoon";
 import GameCardContainer from "./GameCardContainer";
 
 const GameGrid = () => {
-  const { games, error, isLoading } = useGames();
+  const { data, error, isLoading } = useGames();
   const skelatons = [1, 2, 3, 4, 5, 6, 7];
   return (
     <>
@@ -23,7 +23,7 @@ const GameGrid = () => {
               <LoadingSkelaton key={skelaton}></LoadingSkelaton>
             </GameCardContainer>
           ))}{" "}
-        {games.map((game) => (
+        {data.map((game) => (
           <GameCardContainer>
             {" "}
             <GameCard key={game.id} game={game}></GameCard>
