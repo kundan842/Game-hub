@@ -64,5 +64,14 @@ but its also provdies the seperation of concerns and make code  more modular
 <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 5 }} spacing={10}>
 smaller device will have 1 column lg like laptop will have 3 so on 
 => https://chakra-ui.com/docs/styled-system/style-props#margin-and-padding
-=> to place composnennst horizonatlly hstch is used
+=> to place composnennst horizonatlly hstch is used. 
+=> to show image in compoennt like card its not good to get full size imgae as it takes more 
+request time for larger image size
+=> so better to modify the image url before using it into src 
+=> in netwrok tab of browser with the request made request, request and response header 
+we  can also see the images fetched forom server or cdn in image tab
+=> to show loading state of some component skelaton element can be used
+=> https://chakra-ui.com/docs/components/skeleton/usage
+=>          <GameCardContainer> <GameCard key={game.id} game={game}></GameCard></GameCardContainer>
+here when the GameCard is wrapped inside the GameCardContainer, GameCard is props of type ReactNode
 
