@@ -4,9 +4,14 @@ import GameGrid from "./components/GameGrid";
 import GeneresList from "./components/GeneresList";
 import { useState } from "react";
 import { Generes } from "./hooks/useGeneres";
+import PlateformSelector from "./components/PlateformSelector";
+import { Plateform } from "./hooks/useGameS";
 
 function App() {
   const [selectdGenere, setSelecetdGenere] = useState<Generes | null>(null);
+  const [selctedPlateform, setSelectedplateform] = useState<Plateform | null>(
+    null
+  );
   return (
     <div>
       <Grid
@@ -37,8 +42,17 @@ function App() {
           </GridItem>
         </Show>
 
-        <GridItem area={"main"} padding="10px">
-          <GameGrid selecteddGenere={selectdGenere}></GameGrid>
+        <GridItem area={"main"} padding="20px">
+          <PlateformSelector
+            selectedPalteform={selctedPlateform}
+            onSelectPlateform={(plateform: Plateform) =>
+              setSelectedplateform(plateform)
+            }
+          />
+          <GameGrid
+            selectedPlateform={selctedPlateform}
+            selecteddGenere={selectdGenere}
+          ></GameGrid>
         </GridItem>
       </Grid>
     </div>
