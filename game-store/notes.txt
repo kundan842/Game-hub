@@ -76,5 +76,10 @@ we  can also see the images fetched forom server or cdn in image tab
 here when the GameCard is wrapped inside the GameCardContainer, GameCard is props of type ReactNode
 => a compoennt should not know about the http request or end point 
 it should return markup
+=> to share the data between two compoennt we need to lift the state up to closest parent
+=> like  to share selected geener from genere compoennt to game component
+need to lift teh state to app compoennt which is the closet parent
+=> axios.get(url, requetsConfigObject)
+=> requestconfig objetct can have data that need to beed send in request body, queryparams etc
 
 

@@ -5,16 +5,20 @@ import useGames from "../hooks/useGameS";
 import GameCard from "./GameCard";
 import LoadingSkelaton from "./LoadingSkelatoon";
 import GameCardContainer from "./GameCardContainer";
+import { Generes } from "../hooks/useGeneres";
+interface Props {
+  selecteddGenere: Generes | null;
+}
 
-const GameGrid = () => {
-  const { data, error, isLoading } = useGames();
+const GameGrid = ({ selecteddGenere }: Props) => {
+  const { data, error, isLoading } = useGames(selecteddGenere);
   const skelatons = [1, 2, 3, 4, 5, 6, 7];
   return (
     <>
       {error && <Text>{error}</Text>}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
-        spacing={10}
+        spacing={8}
         // padding="10px"
       >
         {isLoading &&

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import apiClient from "../servvices/api-client";
-import { CanceledError } from "axios";
+import { AxiosRequestConfig, CanceledError } from "axios";
 
 interface FetchResponse<T>
 {
@@ -8,7 +8,7 @@ interface FetchResponse<T>
     results: T[]
 }
 
-const useData = <T>(endpoint:string) =>
+const useData = <T>(endpoint:string, reqestConfig?:AxiosRequestConfig, deps?:any[]) =>
 {
 
     const [data, setData] = useState<T[]>([]);
@@ -18,7 +18,7 @@ const useData = <T>(endpoint:string) =>
     useEffect(() => {
         setLoading(true)
       apiClient
-        .get<FetchResponse<T>>(endpoint, {signal:controller.signal})
+        .get<FetchResponse<T>>(endpoint, {signal:controller.signal, ...reqestConfig})
         .then((res) => 
         {setData(res.data.results)
             setLoading(false)
@@ -29,7 +29,7 @@ const useData = <T>(endpoint:string) =>
         setLoading(false)});
          // rteurn cleanup fucntion 
          return ()=> controller.abort();
-    }, []);
+    }, deps?[...deps] :[]);
 // setloadin need to be set in finally block no need to use twice in error then in rposne oading should be set false in 
     return {data, error,isLoading}
 }
