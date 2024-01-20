@@ -6,16 +6,15 @@ import GameCard from "./GameCard";
 import LoadingSkelaton from "./LoadingSkelatoon";
 import GameCardContainer from "./GameCardContainer";
 import { Generes } from "../hooks/useGeneres";
+import { GameQuery } from "../App";
 interface Props {
-  selecteddGenere: Generes | null;
-  selectedPlateform: Plateform | null;
+  // selecteddGenere: Generes | null;
+  // selectedPlateform: Plateform | null;
+  gameQuery: GameQuery;
 }
 
-const GameGrid = ({ selecteddGenere, selectedPlateform }: Props) => {
-  const { data, error, isLoading } = useGames(
-    selecteddGenere,
-    selectedPlateform
-  );
+const GameGrid = ({ gameQuery }: Props) => {
+  const { data, error, isLoading } = useGames(gameQuery);
   const skelatons = [1, 2, 3, 4, 5, 6, 7];
   return (
     <>

@@ -85,3 +85,5 @@ need to lift teh state to app compoennt which is the closet parent
 => to create dropdown list using select option , menu elleement is there in Chakra
 => https://chakra-ui.com/docs/components/menu/usage
 => https://chakra-ui.com/docs/styled-system/style-props#layout-width-and-height
+=> for each kind of variable its not good to create state variable so its better to crete the 
+query params object
