@@ -95,5 +95,14 @@ string
 Available fields: name, released, added, created, updated, rating, metacritic. You can reverse the sort order adding a hyphen, for example: -released
 => in some games image url is not returned so in such cases better to provide staic no image placeholder
 => such static image place holder should return as module
+=> in genres list images are distorted cause the fetching image of size 600*400
+and fitting it inside the cotainer of size 30 * 30  so aspect ratio get distorted
+=> to make sure images are fit not blurred set obejctFit cover
+=> emojiMap: { [key: number]: ImageProps } annotating the object here  [key: number] called index signature
+=> defiifng emojiMap of type object here object has any number of key with tpe number and its valus is of type ImageProps of chakra ui
+=> https://chakra-ui.com/docs/components/image/usage
+=> static data like genres, plateforms are not changing so insted of calling each time to server we 
+can get the data once and store it in memory and display each time so will reduce time 
+and make better usesr expereinece
 
 
