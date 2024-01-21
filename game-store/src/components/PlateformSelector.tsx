@@ -1,3 +1,4 @@
+import { BsChevronDown } from "react-icons/bs";
 import { Plateform } from "../hooks/useGameS";
 import usePlateforms from "../hooks/usePlateforms";
 import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
@@ -11,7 +12,7 @@ const PlateformSelector = ({ onSelectPlateform, selectedPalteform }: Props) => {
   if (error) return null;
   return (
     <Menu>
-      <MenuButton as={Button}>
+      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
         {selectedPalteform?.name || "Plateforms"}
       </MenuButton>
 
@@ -20,6 +21,7 @@ const PlateformSelector = ({ onSelectPlateform, selectedPalteform }: Props) => {
           <MenuItem
             key={plateform.id}
             onClick={() => onSelectPlateform(plateform)}
+            value={plateform.name}
           >
             {plateform.name}
           </MenuItem>

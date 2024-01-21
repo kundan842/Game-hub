@@ -87,3 +87,13 @@ need to lift teh state to app compoennt which is the closet parent
 => https://chakra-ui.com/docs/styled-system/style-props#layout-width-and-height
 => for each kind of variable its not good to create state variable so its better to crete the 
 query params object
+=> rightIcon={<BsChevronDown /> to show arrow on sorting dropdown
+=> various api endpoint to get the game with diffrent queeryparams and orediering
+  https://api.rawg.io/docs/#tag/games
+=========================================================================================================================================
+string
+Available fields: name, released, added, created, updated, rating, metacritic. You can reverse the sort order adding a hyphen, for example: -released
+=> in some games image url is not returned so in such cases better to provide staic no image placeholder
+=> such static image place holder should return as module
+
+
